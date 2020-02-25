@@ -1,5 +1,7 @@
 # FPWM
 
-`install.packages("devtools")`
-`library("devtools")`
-`devtools::install_github("benoukraflab/TFregulomeR")`
+```r
+install.packages("devtools")
+library("devtools")
+devtools::install_github("benoukraflab/TFregulomeR")
+```
