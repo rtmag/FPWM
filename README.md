@@ -10,6 +10,7 @@ devtools::install_github("https://github.com/rtmag/FPWM")
 # Quick usage
 MiniCofactor Report
 ```r
+library("FPWM")
 miniCofactorReport( TF = "CEBPB", cell = "K562",cobinding_threshold=.25)
 ```
 FPWM Creation and plot
