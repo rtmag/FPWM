@@ -1,4 +1,4 @@
-#' cofactorReport
+#' Produces a cofactorReport
 #'
 #' This function allows you to get a PDF report of top cofactors along with DNA methylation for a TF.
 #' @param TF Main TF of interest.
@@ -9,11 +9,11 @@
 #' @param height Height in inch for the plot.
 #' @param width Width in inch for the plot.
 #' @param pdfName Name of the pdf to be saved.
-#' @return A PDF file
+#' @return A PDF file with the cofactorReport.
 #' @keywords cofactorReport
 #' @export
 #' @examples
-#' #miniCofactorReport(TF = "CEBPB",cell = "K562")
+#' miniCofactorReport(TF = "CEBPB",cell = "K562")
 
 miniCofactorReport <- function(TF,
               cell,

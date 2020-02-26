@@ -1,4 +1,15 @@
-
+#' Writes the FPWM in transfact format
+#'
+#' This function saves the FPWM in transfact format.
+#' @param FPWM FPWM object.
+#' @param format  the "transfac" option will output a standard transfact matrix per binding partner. The "FPWMtransfac" prints a single matrix with all the binding partners in FPWM format.
+#' @param fileName name of the file where the FPWM is going to be written.
+#' @return A PDF file with the cofactorReport.
+#' @keywords cofactorReport
+#' @export
+#' @examples
+#' write.FPWM(FPWM = fpwm, format = "transfac", fileName = "FPWM.transfact" )
+#' write.FPWM(FPWM = fpwm, format = "FPWMtransfac", fileName = "FPWM.FPWMtransfac" )
 
 write.FPWM <- function( FPWM = NULL,
 							format = "transfac",

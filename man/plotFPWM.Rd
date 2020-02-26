@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotFPWM.R
 \name{plotFPWM}
 \alias{plotFPWM}
-\title{A function for generating the forked Position Weight Matrix}
+\title{A function to plot the forked Position Weight Matrix}
 \usage{
 plotFPWM(
   FPWM,
@@ -29,6 +29,12 @@ plotFPWM(
 
 \item{pdfName}{Name for the output pdf.}
 }
+\value{
+Plots the FPWM into a PDF file.
+}
 \description{
 This function takes the generated class object and plots a forked position weight matrix.
+}
+\examples{
+plotFPWM(fpwm, pdfName="fpwm_plot.pdf")
 }

@@ -36,11 +36,11 @@ createFPWM(
 \item{flipMatrix}{Logical, whether to apply reverse complement in case the core motif is after the forkPosition (Default FALSE).}
 }
 \value{
-This component, returns a class object which holds all the neccessary information for other functions.
+This component, returns a FPWM class object that can be used to plot or written in transfact format.
 }
 \description{
 This function assigns proper data to their associated slots of a S4 classe. This information is either provided by user, or exported from TFregulomeR's dataware using user specified data.
 }
 \examples{
-#fpwm <- createFPWM(mainTF ="CEBPB", partners = c("ATF4","ATF7","JUND"), cell = "K562", forkPosition = 5)
+fpwm <- createFPWM(mainTF ="CEBPB", partners = c("ATF4","ATF7","JUND"), cell = "K562", forkPosition = 5)
 }

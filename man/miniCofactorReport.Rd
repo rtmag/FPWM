@@ -2,7 +2,7 @@
 % Please edit documentation in R/miniCofactorReport.R
 \name{miniCofactorReport}
 \alias{miniCofactorReport}
-\title{cofactorReport}
+\title{Produces a cofactorReport}
 \usage{
 miniCofactorReport(
   TF,
@@ -33,12 +33,12 @@ miniCofactorReport(
 \item{pdfName}{Name of the pdf to be saved.}
 }
 \value{
-A PDF file
+A PDF file with the cofactorReport.
 }
 \description{
 This function allows you to get a PDF report of top cofactors along with DNA methylation for a TF.
 }
 \examples{
-#miniCofactorReport(TF = "CEBPB",cell = "K562")
+miniCofactorReport(TF = "CEBPB",cell = "K562")
 }
 \keyword{cofactorReport}

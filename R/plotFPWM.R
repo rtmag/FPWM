@@ -1,4 +1,4 @@
-#' A function for generating the forked Position Weight Matrix
+#' A function to plot the forked Position Weight Matrix
 #'
 #' This function takes the generated class object and plots a forked position weight matrix.
 #' @param FPWM is an object of S4 class with modified and converted data ready to be plotted.
@@ -8,6 +8,9 @@
 #' @param textSize Size of the text on the plot default 8.
 #' @param scaleBarplot Logical value, TRUE to keep the  .
 #' @param pdfName Name for the output pdf.
+#' @examples
+#' plotFPWM(fpwm, pdfName="fpwm_plot.pdf")
+#' @return Plots the FPWM into a PDF file.
 #' @export
 plotFPWM <- function(FPWM, 
                      Methylation = TRUE, 
