@@ -23,3 +23,8 @@ fpwm <- createFPWM(mainTF ="CEBPB",
 
 plotFPWM(fpwm,pdfName="fpwm_plot.pdf")
 ```
+- Writing FPWM
+```r
+write.FPWM(FPWM = fpwm, format = "transfac", fileName = "FPWM.transfact" )
+write.FPWM(FPWM = fpwm, format = "FPWMtransfac", fileName = "FPWM.FPWMtransfac" )
+```
