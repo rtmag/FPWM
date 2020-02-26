@@ -13,7 +13,7 @@ devtools::install_github("https://github.com/rtmag/FPWM")
 library("FPWM")
 miniCofactorReport( TF = "CEBPB", cell = "K562",cobinding_threshold=.06)
 ```
-- FPWM Creation and plot
+- FPWM creation and plot
 ```r
 fpwm <- createFPWM(mainTF ="CEBPB",
                         partners = c("ATF4","ATF7","ATF3","JUND","FOS","CEBPD"),
