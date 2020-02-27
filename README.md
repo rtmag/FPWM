@@ -31,7 +31,7 @@ plotFPWM(fpwm,pdfName="fpwm_plot.pdf")
 ```
 <div align="center">
 <a name="fpwm_plot"/>
-<img src="./inst/fpwm_plot.png" alt="fpwm_plot" width="490" height="630" ></img>
+<img src="./inst/fpwm_plot.png" alt="fpwm_plot" width="400" height="630" ></img>
 </a>
 </div>
 
