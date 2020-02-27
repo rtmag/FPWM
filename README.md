@@ -13,6 +13,12 @@ devtools::install_github("https://github.com/rtmag/FPWM")
 library("FPWM")
 miniCofactorReport( TF = "CEBPB", cell = "K562",cobinding_threshold=.06)
 ```
+<div align="center">
+<a name="miniCofactorReport"/>
+<img src="./inst/MM1_HSA_K562_CEBPB_cofactor_minireport.png" alt="miniCofactorReport" ></img>
+</a>
+</div>
+
 - FPWM creation and plot
 ```r
 fpwm <- createFPWM(mainTF ="CEBPB",
