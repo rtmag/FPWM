@@ -15,7 +15,7 @@ miniCofactorReport( TF = "CEBPB", cell = "K562",cobinding_threshold=.06)
 ```
 <div align="center">
 <a name="miniCofactorReport"/>
-<img src="./inst/MM1_HSA_K562_CEBPB_cofactor_minireport.png" alt="miniCofactorReport" ></img>
+<img src="./inst/MM1_HSA_K562_CEBPB_cofactor_minireport.png" alt="miniCofactorReport" width="200" height="400" ></img>
 </a>
 </div>
 
