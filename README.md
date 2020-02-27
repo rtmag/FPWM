@@ -1,4 +1,4 @@
-# FPWM (Forked Position Weight Matrix)
+# Forked Position Weight Matrix (FPWM)
 FPWM builds  a graph model of multiple PWMs (or Seq-logos) to have a better representation of the different motif a TF uses when binding in complex with other transcription factors.
 ### Installation
 Type the following in R console:
