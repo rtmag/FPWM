@@ -16,6 +16,9 @@ devtools::install_github("https://github.com/rtmag/FPWM")
    - [cowplot](https://cran.r-project.org/web/packages/cowplot/index.html) (>= 1.0.0)
    - [grid](https://www.rdocumentation.org/packages/grid/versions/3.6.1) (>= 3.6.1)
 
+## Documentation
+For an extended view of the options please visit the documentation in our [vignette](http://benoukraf-lab.com/vignettes/vignette-FPWM.html)
+
 ## Quick usage
 #### MiniCofactor Report
 This function helps in the exploration of binding partners in a cell line. Input the `mainTF`, `cell` line of interest and the `cobinding_threshold` to generate a PDF report of the binding partners.
