@@ -4,13 +4,13 @@
 ```r
 install.packages("devtools")
 library("devtools")
-devtools::install_github("https://github.com/rtmag/FPWM")
+devtools::install_github("https://github.com/benoukraflab/forkedTF")
 ```
 
 ### Quick usage
 - MiniCofactor Report
 ```r
-library("FPWM")
+library("forkedTF")
 miniCofactorReport( TF = "CEBPB", cell = "K562",cobinding_threshold=.06)
 ```
 - FPWM creation and plot

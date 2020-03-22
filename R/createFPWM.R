@@ -62,6 +62,8 @@ createFPWM <- function( mainTF = NULL,
       peak_id_y_list = partners_MMID ; peak_id_x = mainTF_MMID
     }
 
+    if( length(peak_id_y_list) < 2) { stop("The list of partner TF should contain 2 or more elements.") }
+
     Motif <- TFregulomeR::intersectPeakMatrix(peak_id_x = peak_id_x, motif_only_for_id_x = TRUE, peak_id_y = peak_id_y_list, motif_only_for_id_y = TRUE)
 
     motif_length <- dim(Motif[1,1][[1]]@MethMotif_x@MMBetaScore)[2] # get number of positions in motif
@@ -204,7 +206,18 @@ ConvertToFTRANSFAC <- function(fpwmObject, probabilityMatrix, scaleFrequencyCoun
 
       if(scaleFrequencyCounts == TRUE){
         scaleNumber <- sum(DF[1,2:5])
-        DF[i:((Step+i)-1),2:5] <- round(fpwmObject@matrix[[c]][(forkPosition+1):RowNum,] * scaleNumber)
+        tmp_scaled_mat <- round(fpwmObject@matrix[[c]][(forkPosition+1):RowNum,] * scaleNumber)
+        # check the round didn't add an extra count
+        if( sum(rowSums(tmp_scaled_mat) != scaleNumber) ){
+          for(ifix in which(rowSums(tmp_scaled_mat) != scaleNumber) ){
+            diff_val <- sum(tmp_scaled_mat[ifix,]) - scaleNumber
+            tmp_scaled_mat[ ifix, which.max(tmp_scaled_mat[ifix,]) ] <- tmp_scaled_mat[ ifix, which.max(tmp_scaled_mat[ifix,]) ] - diff_val
+          }
+
+
+        }
+
+        DF[i:((Step+i)-1),2:5] <- tmp_scaled_mat
       }
       c <- c+1
     }

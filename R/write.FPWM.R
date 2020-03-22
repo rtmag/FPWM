@@ -23,6 +23,15 @@ write.FPWM <- function( FPWM = NULL,
 	if( format!="transfac" & format!="FPWMtransfac" ){ 
         stop("formats supported : transfac or FPWMtransfac ") ; } 
 
+    # Get format from forked
+    diff_rowSums <- length(unique(rowSums(FPWM@forked[,2:5])))
+    first_rowsum <- rowSums(FPWM@forked[,2:5])[1]
+    matrix_format <- "CC Matrix"
+    if(diff_rowSums != 1 ){ matrix_format <- "CC Count matrix" }else{
+    	if(first_rowsum > 1){ matrix_format <- "CC Scale Count matrix" }
+    	if(first_rowsum == 1){ matrix_format <- "CC Probability matrix" }
+    }
+
 	if( format == "FPWMtransfac"){
 		ynames <- paste(unlist(FPWM@id),collapse="_&_")
 
@@ -46,7 +55,7 @@ write.FPWM <- function( FPWM = NULL,
 		for ( jx in 1:dim(FPWM@forked)[1] ){
 				transfac_vector <- c( transfac_vector, paste(FPWM@forked[jx,],collapse="\t") )
 			}
-		transfac_vector <- c( transfac_vector, "XX", "CC FPWMtransfac format from FPWM", "XX" , "//"  )
+		transfac_vector <- c( transfac_vector, "XX", "CC FPWMtransfac format from FPWM",matrix_format, "XX" , "//"  )
 
 		writeLines(transfac_vector, fileConn)
 		close(fileConn)
@@ -87,6 +96,7 @@ write.FPWM <- function( FPWM = NULL,
 			transfac_vector <- c( transfac_vector, c("XX","CC program: FPWM")  )
 			transfac_vector <- c( transfac_vector, paste0("CC numberOfBasePairs: ",FPWM@nSites[ix])  )
 			transfac_vector <- c( transfac_vector, paste0("CC numberOfOverlappingPeaks: ",FPWM@nPeaks[ix])  )
+			transfac_vector <- c( transfac_vector, matrix_format  )
 			transfac_vector <- c( transfac_vector, c("XX","//")  )
 		}
 

@@ -1,6 +1,6 @@
-Package: FPWM
+Package: forkedTF
 Type: Package
-Title: Creation of Forked-Position Weight Matrices (FPWM), a graph model of multiple PWMs.
+Title: Creation of Forked-Position Weight Matrices, a graph model of multiple PWMs.
 Version: 0.1.0
 Author: c(person("Roberto Tirado", email = "roberto@u.nus.edu"))
 Depends: R (>= 3.6.0), methods
@@ -18,5 +18,5 @@ Description: More about what it does (maybe more than one line)
 License: GPL-3.0
 Encoding: UTF-8
 LazyData: true
-BugReports: https://github.com/benoukraflab/FPWM/issues
+BugReports: https://github.com/benoukraflab/forkedTF/issues
 RoxygenNote: 7.0.2
